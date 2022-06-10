@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 300px;
+    width: 400px;
+    border-radius: 30px;
+    background-color: blue;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.elemento {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    text-align: center;
+}
