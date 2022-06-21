@@ -1,0 +1,149 @@
+h1 {
+    text-align: center;
+    z-index: -70px;
+    color: black;
+}
+
+.tabela-periodica {
+    display: grid;
+    grid-template-columns: repeat(18, 60px);
+    grid-template-rows: repeat(9, 75px);
+    position: absolute;
+    top: 0%;
+    right: 50%;
+    transform: translateX(50%);
+    border: 2px solid white;
+    padding: 75px 10px 2900px 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .5);
+}
+
+.caixa {
+    width: 60px;
+    height: 75px;
+    border: 1px solid black;
+}
+
+.caixa:hover div {
+    cursor: pointer;
+    transform: scale(1.1);
+    background: white;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .5);
+}
+
+.espaco {
+    margin-top: 5px;
+    font-size: 9pt;
+    text-align: center;
+}
+
+.nao-metais {
+    background-color: rgb(180, 248, 226);
+}
+
+.metais-alcalinos {
+    background-color: rgb(243, 211, 151);
+}
+
+.metais-alcalinos-terrosos {
+    background-color: rgb(242, 243, 165);
+}
+
+.metais {
+    background-color: rgb(243, 207, 207);
+}
+
+.semi-metais {
+    background-color: rgb(141, 226, 226);
+}
+
+.outros-metais {
+    background-color: rgb(171, 216, 253);
+}
+
+.halogenios {
+    background-color: rgb(192, 240, 253);
+}
+
+.gases-nobres {
+    background-color: rgb(225, 199, 255);
+}
+
+.lantanideos {
+    background-color: rgb(135, 185, 243);
+    margin-top: 20px;
+}
+
+.actinidios {
+    background-color: rgb(235, 176, 232);
+    margin-top: 25px;
+}
+
+.numero-atomico {
+    font-size: 9pt;
+    margin-right: 2px;
+    margin-top: 1px;
+    text-align: right;
+}
+
+.elemento {
+    font-weight: bold;
+    font-size: 20pt;
+    text-align: center;
+}
+
+.nome-elemento {
+    font-size: 9pt;
+    text-align: center;
+}
+
+.legenda {
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 120%;
+    text-align: center;
+    color: black;
+}
+
+.legendas {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 17px;
+    display: inline-block;
+}
+
+.legenda-caixa {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+}
+
+.tabela-titulo {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lista-elementos,
+th,
+td {
+    border: 1px solid;
+    border-collapse: collapse;
+    cursor: pointer;
+}
+
+.lista-elementos {
+    position: absolute;
+    background-color: aliceblue;
+    text-align: center;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 160%;
+    color: black;
+}
