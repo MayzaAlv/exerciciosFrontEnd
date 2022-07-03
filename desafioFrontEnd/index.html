@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/" href="./images/favicon.ico" />
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="./main.js"></script>
+    <title>Formalis</title>
+</head>
+
+<body class="bg-light">
+    <div class="text-center">
+        <img src="images/logo.png" class="rounded" alt="logo">
+    </div>
+    <div class="container">
+        <form id="form" method="post" class="row justify-content-md-center g-4">
+            <div class="col-md-5">
+                <label for="inputFirstName" class="form-label">First Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="inputFirstName" name="firstName" required
+                    pattern="^[A-Za-z]+$" title="You have to inform your first name">
+            </div>
+            <div class="col-md-5">
+                <label for="inputLastName" class="form-label">Last Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="inputLastName" name="lastName" required
+                    pattern="^[A-Za-z]+$" title="You have to inform your last name">
+            </div>
+            <div class="col-md-3">
+                <label for="inputEmail" class="form-label">Email <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="inputEmail" name="email" required
+                    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" title="You have to inform your email">
+            </div>
+            <div class="col-md-4">
+                <label for="inputLogin" class="form-label">Login</label>
+                <input type="text" class="form-control" id="inputLogin" name="login" disabled>
+            </div>
+            <div class="col-md-3">
+                <label for="inputPassword" class="form-label">Password <span class="text-danger">*</span></label>
+                <input type="password" class="form-control" id="inputPassword" name="password" required
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                    title="You have to inform a strong password">
+            </div>
+            <div class="col-md-3">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="number" class="form-control" id="inputZip" name="zip">
+            </div>
+            <div class="col-md-4">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" name="address">
+            </div>
+            <div class="col-md-3">
+                <label for="inputComplement" class="form-label">Complement</label>
+                <input type="text" class="form-control" id="inputComplement" name="complement">
+            </div>
+            <div class="col-md-3">
+                <label for="inputDistrict" class="form-label">District</label>
+                <input type="text" class="form-control" id="inputDistrict" name="district">
+            </div>
+            <div class="col-md-4">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity" name="city">
+            </div>
+            <div class="col-md-3">
+                <label for="inputState" class="form-label">State</label>
+                <input type="text" class="form-control" id="inputState" name="state">
+            </div>
+            <div class="mt-auto col-md-3">
+                <label for="inputState" class="form-label">Github <span class="text-danger">*</span></label>
+                <div class="input-group">
+                    <span class="input-group-text"><img src="./images/githubLogo.png" alt="GithubLogo"
+                            class="img-fluid w-75 h-75"></span>
+                    <input type="text" class="form-control" id="inputGithub" aria-label=" GitHub"
+                        aria-describedby="basic-addon1" name="github" required>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="inputAcademy" class="form-label">Academy <span class="text-danger">*</span></label>
+                <select id="inputAcademy" name="academy" class="form-select" required>
+                    <option value="">Choose...</option>
+                    <option value="1">Academy .Net</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="inputTeacher" class="form-label">Teacher <span class="text-danger">*</span></label>
+                <select id="inputTeacher" class="form-select" name="teacher" required>
+                    <option value="">Choose...</option>
+                    <option value="1">Alexandre Zamberlan</option>
+                    <option value="2">Deivison Pasa</option>
+                    <option value="3">Ricardo Frohlich</option>
+                </select>
+            </div>
+            <div class="form-group col-sm-10">
+                <label for="Terms">Terms of use</label>
+                <div class="form-control" id="Terms" rows="5">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Nullam quis tincidunt eros, et varius nisl. In nec accumsan odio. Aliquam nec
+                    tincidunt lacus, sed venenatis eros. Mauris sollicitudin sed erat eget auctor. Vivamus a turpis mi.
+                    Donec eu lacus nibh. Nullam lorem leo, tincidunt sed tristique ac, mollis eget nulla. Proin nec
+                    tellus elit. Cras auctor risus ante, et porttitor justo ultrices ac. Duis velit elit, iaculis vel
+                    viverra eu, consectetur ac lacus. Vivamus euismod risus vitae purus tempus, non vehicula urna
+                    pulvinar. Integer at tempor lectus, in pulvinar nisi. Sed cursus, dui at euismod vehicula, justo
+                    lorem fringilla velit, eget gravida nunc massa eget massa. Vivamus imperdiet sed ipsum et
+                    condimentum.
+                </div>
+            </div>
+            <div class="col-sm-10">
+                <input class="form-check-input" type="checkbox" id="gridCheck" name="agreeTerms" required>
+                <label class="form-check-label">
+                    Agree with terms
+                </label>
+            </div>
+            <div class="col-sm-10">
+                <input class="form-check-input" type="radio" name="radios" id="radios" value="1" checked>
+                <label class="form-check-label">
+                    I agree to receive newsletter of news
+                </label>
+            </div>
+            <div class="col-sm-10">
+                <input class="form-check-input" type="radio" name="radios" id="radios2" value="0">
+                <label class="form-check-label">
+                    Don't Agree
+                </label>
+            </div>
+            <div class="text-center">
+                <button type="submit" id="submit" class="btn btn-dark btn-lg">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-8 mx-auto mt-5 pt-5 d-none" id="table">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th scope="row">First Name</th>
+                    <td id="firstName"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Last Name</th>
+                    <td id="lastName"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Email</th>
+                    <td id="email"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Login</th>
+                    <td id="login"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Password</th>
+                    <td id="password"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Zip</th>
+                    <td id="zip"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Address</th>
+                    <td id="address"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Complement</th>
+                    <td id="complement"></td>
+                </tr>
+                <tr>
+                    <th scope="row">District</th>
+                    <td id="district"></td>
+                </tr>
+                <tr>
+                    <th scope="row">City</th>
+                    <td id="city"></td>
+                </tr>
+                <tr>
+                    <th scope="row">State</th>
+                    <td id="state"></td>
+                </tr>
+                <tr>
+                    <th scope="row">GitHub</th>
+                    <td id="github"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Academy</th>
+                    <td id="academy"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Teacher</th>
+                    <td id="teacher"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
