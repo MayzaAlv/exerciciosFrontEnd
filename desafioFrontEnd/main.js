@@ -8,19 +8,34 @@ document.getElementById('form').addEventListener('submit', function (e) {
 document.getElementById('inputFirstName').addEventListener('keyup', login);
 document.getElementById('inputLastName').addEventListener('keyup', login);
 
-try {
-    document.getElementById('inputZip').addEventListener('focusout', async function (e) {
+
+document.getElementById('inputZip').addEventListener('focusout', async function (e) {
+    try {
         let data = await fetch(`https://viacep.com.br/ws/${inputZip.value}/json/`);
         let zip = await data.json();
 
-        document.getElementById('inputAddress').value = zip.logradouro;
-        document.getElementById('inputComplement').value = zip.complemento;
-        document.getElementById('inputDistrict').value = zip.bairro;
-        document.getElementById('inputCity').value = zip.localidade;
-        document.getElementById('inputState').value = zip.uf;
-    });
+        if (zip.uf != undefined) {
+            document.getElementById('inputAddress').value = zip.logradouro;
+            document.getElementById('inputComplement').value = zip.complemento;
+            document.getElementById('inputDistrict').value = zip.bairro;
+            document.getElementById('inputCity').value = zip.localidade;
+            document.getElementById('inputState').value = zip.uf;
+        }
+        else {
+            AlertZip();
+        }
+    }
+    catch (err) {
+        if (inputZip.value != '') {
+            AlertZip();
+        }
+    }
+});
+
+function AlertZip() {
+    alert('ZIP invalid');
 }
-catch (err) { }
+
 
 function login() {
     const firstName = document.getElementById('inputFirstName').value;
